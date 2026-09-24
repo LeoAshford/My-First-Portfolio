@@ -210,29 +210,6 @@ topButton.addEventListener("click", function () {
 });
 
 
-/* =========================
-   CONTACT FORM
-========================= */
-
-const contactForm =
-    document.getElementById("contact-form");
-
-contactForm.addEventListener("submit", function (event) {
-
-    event.preventDefault();
-
-    const name =
-        document.getElementById("name").value;
-
-    alert(
-        "Thank you, " + name +
-        "! Your message has been received."
-    );
-
-    contactForm.reset();
-
-});
-
 
 /* =========================
    ACTIVE NAVIGATION
@@ -324,4 +301,48 @@ cards.forEach(function (card) {
 
     });
 
+});
+/* =========================
+   EMAILJS CONTACT FORM
+========================= */
+
+emailjs.init({
+    publicKey: "Dlac5DfiEYx85nRTD"
+});
+
+const contactForm = document.getElementById("contact-form");
+
+contactForm.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const button = contactForm.querySelector("button");
+
+    button.disabled = true;
+    button.textContent = "Sending...";
+
+    emailjs.sendForm(
+        "service_vxuoql5",
+        "template_jqlmgyj",
+        contactForm
+    )
+    .then(function () {
+
+        alert("Message sent successfully! ✓");
+
+        contactForm.reset();
+
+        button.disabled = false;
+        button.textContent = "Send Message →";
+
+    })
+    .catch(function (error) {
+
+        console.error("EmailJS Error:", error);
+
+        alert("Failed to send message. Please try again.");
+
+        button.disabled = false;
+        button.textContent = "Send Message →";
+    });
 });
