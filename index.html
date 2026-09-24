@@ -7,6 +7,8 @@
     <title>My Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -50,7 +52,7 @@
             <p class="small-text">WELCOME TO MY PORTFOLIO</p>
 
             <h1>
-                Hi, I'm <span>Wai Linn</span>
+                Hi, I'm <span>WAI LINN HTET</span>
             </h1>
 
             <h2>
@@ -79,8 +81,8 @@
             <div class="circle-bg"></div>
 
             <div class="profile-card">
-                <div class="profile-icon">
-                    <img src="image/IMG_0857.JPG" alt="My profile"
+                <div> class="profile-icon">
+                    <img src="image/IMG_0857.JPG" alt="My profile">
                 </div>
 
                 <h3>Developer</h3>
@@ -414,7 +416,43 @@
             </div>
 
 
-            <form id="contact-form">
+<form id="contact-form">
+
+    <div class="input-group">
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+        >
+    </div>
+
+    <div class="input-group">
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+            required
+        >
+    </div>
+
+    <div class="input-group">
+        <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Your Message"
+            required
+        ></textarea>
+    </div>
+
+    <button type="submit" class="btn primary-btn">
+        Send Message →
+    </button>
+
+</form>
 
                 <div class="input-group">
                     <input
