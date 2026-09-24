@@ -14,9 +14,12 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #0b0f19;
-    color: #ffffff;
-    line-height: 1.6;
+    background-image: linear-gradient(rgba(0,0,0,0.90),rgba(0,0,0,0.90)),url("image/IMG_4429.JPG");
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e1ece6;
+    line-height: 2;
     overflow-x: hidden;
 }
 
@@ -303,9 +306,9 @@ header {
 
     border-radius: 25px;
 
-    background: rgba(255,255,255,0.06);
+    background: rgba(236, 228, 228, 0.06);
 
-    border: 1px solid rgba(255,255,255,0.12);
+    border: 1px solid rgba(22, 158, 90, 0.12);
 
     backdrop-filter: blur(20px);
 
@@ -315,12 +318,14 @@ header {
     align-items: center;
     justify-content: center;
 
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 60px rgba(182, 159, 159, 0.4);
 }
 
-.profile-icon {
-    font-size: 100px;
-    margin-bottom: 15px;
+.profile-icon img{
+    width: 200px;
+    height:200px;
+    object-fit: cover;
+   border-radius: 10%;
 }
 
 .profile-card h3 {
@@ -328,7 +333,7 @@ header {
 }
 
 .profile-card p {
-    color: #9ca3af;
+    color: #d6dae0;
 }
 
 
